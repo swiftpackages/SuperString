@@ -8,7 +8,7 @@
 ![docs](https://github.com/swiftpackages/SuperString/workflows/docs/badge.svg)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/a859e81da1974a5db9625519e7278d0e)](https://www.codacy.com/gh/swiftpackages/SuperString/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=swiftpackages/SuperString&amp;utm_campaign=Badge_Grade)
 
-You can easily add as a requirement with SwiftPM.
+Extend the power of Strings in Swift.
 
 ## Getting Started
 
