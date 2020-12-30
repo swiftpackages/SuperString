@@ -58,10 +58,12 @@ let package = Package(
 
 ## Usage
 
-Currently there is only `kebabcased`
+Currently there is `kebabcased` and `snakecased`
 
 ```swift
 "ThisIs a Cool string".kebabcased() // this-is-a-cool-string
+
+"ThisIs a Cool string".snakecased() // this_is_a_cool_string
 ```
 
 ### Additional Documentation
