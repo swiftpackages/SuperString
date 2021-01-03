@@ -16,4 +16,42 @@ public extension StringProtocol {
             .enumerated().flatMap { $0 > 0 && $1.isUppercase ? "_\($1.lowercased())" : "\($1.lowercased())" }
         )
     }
+
+    /// Turns the string into a camalCase string
+    /// - parameters:
+    ///     - upper: `Bool` default `false` if true the first character is upper
+    /// - returns: String in camelCase
+    func camelcased(_ caseType: CamelCaseType = .lower) -> String {
+        var output: String = ""
+        var previous = false // previous conditon requires next value to be capitalized
+        for char in self {
+            var capitalize: Bool
+            if char.isWhitespace || char.isDash {
+                capitalize = true
+                previous = true
+                continue
+            } else if char.isUppercase {
+                capitalize = output.isEmpty ? caseType == .upper : true
+            } else {
+                capitalize = output.isEmpty ? caseType == .upper : false
+            }
+            output += previous || capitalize ? char.uppercased() : char.lowercased()
+            previous = false
+        }
+        return output
+    }
+}
+
+public enum CamelCaseType {
+    case upper
+    case lower
+}
+
+public extension Character {
+    var isDash: Bool {
+        return self == "-"
+            || self == "–"
+            || self == "—"
+            || self == "_"
+    }
 }

@@ -58,12 +58,16 @@ let package = Package(
 
 ## Usage
 
-Currently there is `kebabcased` and `snakecased`
+Currently there is `camelcamed`, `kebabcased`, and `snakecased`.
 
 ```swift
-"ThisIs a Cool string".kebabcased() // this-is-a-cool-string
+"ThisIs a Cool string".camelcase() // thisIsACoolString
 
-"ThisIs a Cool string".snakecased() // this_is_a_cool_string
+"ThisIs a Cool string".camelcase(.upper) // ThisIsACoolString
+
+"ThisIs a Cool string".kebabcased() // this-is-a--cool-string
+
+"ThisIs a Cool string".snakecased() // this_is_a__cool_string
 ```
 
 ### Additional Documentation
