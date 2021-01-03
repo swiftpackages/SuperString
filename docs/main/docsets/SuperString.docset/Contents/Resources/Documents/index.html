@@ -22,7 +22,7 @@
         <a class="header-link" href="index.html">
           SuperString main Docs
         </a>
-         (100% documented)
+         (55% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -50,8 +50,19 @@
       <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/CamelCaseType.html">CamelCaseType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Character.html">Character</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/StringProtocol.html">StringProtocol</a>
               </li>
@@ -117,10 +128,14 @@
 </code></pre>
 <h2 id='usage' class='heading'>Usage</h2>
 
-<p>Currently there is <code>kebabcased</code> and <code>snakecased</code></p>
-<pre class="highlight swift"><code><span class="s">"ThisIs a Cool string"</span><span class="o">.</span><span class="nf">kebabcased</span><span class="p">()</span> <span class="c1">// this-is-a-cool-string</span>
+<p>Currently there is <code>camelcamed</code>, <code>kebabcased</code>, and <code>snakecased</code>.</p>
+<pre class="highlight swift"><code><span class="s">"ThisIs a Cool string"</span><span class="o">.</span><span class="nf">camelcase</span><span class="p">()</span> <span class="c1">// thisIsACoolString</span>
 
-<span class="s">"ThisIs a Cool string"</span><span class="o">.</span><span class="nf">snakecased</span><span class="p">()</span> <span class="c1">// this_is_a_cool_string</span>
+<span class="s">"ThisIs a Cool string"</span><span class="o">.</span><span class="nf">camelcase</span><span class="p">(</span><span class="o">.</span><span class="n">upper</span><span class="p">)</span> <span class="c1">// ThisIsACoolString</span>
+
+<span class="s">"ThisIs a Cool string"</span><span class="o">.</span><span class="nf">kebabcased</span><span class="p">()</span> <span class="c1">// this-is-a--cool-string</span>
+
+<span class="s">"ThisIs a Cool string"</span><span class="o">.</span><span class="nf">snakecased</span><span class="p">()</span> <span class="c1">// this_is_a__cool_string</span>
 </code></pre>
 <h3 id='additional-documentation' class='heading'>Additional Documentation</h3>
 
