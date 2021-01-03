@@ -40,6 +40,12 @@ public extension StringProtocol {
         }
         return output
     }
+
+    /// An alias for `camelcased(.upper)`
+    /// - returns: String in UpperCamelCase
+    func pascalcased() -> String {
+        return self.camelcased(.upper)
+    }
 }
 
 /// Types of camelCase

@@ -39,6 +39,7 @@ final class SuperStringTests: XCTestCase {
         for inputPair in inputPairs {
             XCTAssertEqual(inputPair.input.camelcased(), inputPair.lower)
             XCTAssertEqual(inputPair.input.camelcased(.upper), inputPair.upper)
+            XCTAssertEqual(inputPair.input.pascalcased(), inputPair.upper)
         }
     }
 
