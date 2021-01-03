@@ -27,7 +27,7 @@ final class SuperStringTests: XCTestCase {
             XCTAssertEqual(inputPair.input.snakecased(), inputPair.expected)
         }
     }
-    
+
     func testCamelcased() {
         let inputPairs: [(input: String, lower: String, upper: String)] = [
             (input: "this is a test", lower: "thisIsATest", upper: "ThisIsATest"),
@@ -41,7 +41,6 @@ final class SuperStringTests: XCTestCase {
             XCTAssertEqual(inputPair.input.camelcased(.upper), inputPair.upper)
         }
     }
-
 
     static var allTests = [
         ("testCamelcased", testCamelcased),
