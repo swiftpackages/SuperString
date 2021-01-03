@@ -19,7 +19,7 @@ public extension StringProtocol {
 
     /// Turns the string into a camalCase string
     /// - parameters:
-    ///     - upper: `Bool` default `false` if true the first character is upper
+    ///     - _ caseType: `CamelCaseType` defaults to `.lower`
     /// - returns: String in camelCase
     func camelcased(_ caseType: CamelCaseType = .lower) -> String {
         var output: String = ""
@@ -42,12 +42,17 @@ public extension StringProtocol {
     }
 }
 
+/// Types of camelCase
 public enum CamelCaseType {
+    // lowerCamelCase: the first character is lowercased
     case upper
+    // UpperCamelCase: the first character is uppercased
     case lower
 }
 
 public extension Character {
+    /// Bool returns if the character is a type of dash (including underscore).
+    /// - returns: true if the character is a type of dash (including underscore).
     var isDash: Bool {
         return self == "-"
             || self == "–"
